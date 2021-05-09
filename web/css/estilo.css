@@ -1,0 +1,17 @@
+
+body{
+    background-color: yellowgreen
+}
+
+.dropdown-item{
+    text-align: left;
+}
+
+.nav-item{
+    background-color: gray;
+}
+#navbarDropdown{
+    color: white;
+    font-family: arial, new-roman, calibirl;
+    font-size: 14pt;
+}

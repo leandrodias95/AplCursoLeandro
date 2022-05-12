@@ -4,34 +4,45 @@
 <jsp:include page="/header.jsp"/>
 <jsp:include page="/menu.jsp"/>
 
-<h2>Estado</h2>
-<table id="datatable" class="display">
+<h2>Cidades</h2>
+<div class="col-8 panel-body">
+    <table id="datatable" class="table table-striped table-bordered basic-datable">
     <thead>
         <tr>
             <th align="left">ID</th>
-            <th align="left">Nome</th>
-            <th align="left">Sigla</th>
+            <th align="left">Cidade</th>
+            <th align="left">Estado</th>
             <th align="right"></th>
             <th align="right"></th>
         </tr>
     </thead>
     <tbody>
-        <c:forEach var="estado" items="${estados}"> 
+        <c:forEach var="cidade" items="${cidades}"> 
             <tr>
-            <td align="left">${estado.idEstado}</td>
-            <td align="left">${estado.nomeEstado}</td>
-            <td align="left">${estado.siglaEstado}</td>
+            <td align="left">${cidade.idCidade}</td>
+            <td align="left">${cidade.nomeCidade}</td>
+            <td align="left">${cidade.estado.siglaEstado}</td>
             <td align="center">
-                <a href="${pageContext.request.contextPath}/EstadoExcluir?idEstado=${estado.idEstado}">Excluir</a></td>
+                <a href="${pageContext.request.contextPath}/CidadeExcluir?idCidade=${cidade.idCidade}">
+                 <button class="btn btn-group-lg
+                         <c:out value="${cidade.situacao == 'A' ? 'btn-danger': 'btn-sucess'}"/>">
+                     <c:out value="${cidade.situacao == 'A' ? 'Inativar': 'Ativar'}"/>
+                 </button>
+                </a>
+               </td>
             <td align="center">
-                <a href="${pageContext.request.contextPath}/EstadoCarregar?idEstado=${estado.idEstado}">Alterar</a></td>
+                <a href="${pageContext.request.contextPath}/CidadeCarregar?idCidade=${cidade.idCidade}">
+                    <button class="btn btn-group-lg btn-sucess"/>Alterar</button>
+                </a>
+            </td>
             </tr>
         </c:forEach>
     </tbody>
+    
 </table>
-
+</div>
 <div align="center">
- <a href="${pageContext.request.contextPath}/EstadoNovo">Novo</a>  
+ <a href="${pageContext.request.contextPath}/CidadeNovo">Novo</a>  
  <a href="index.jsp">Volta à Página Inicial</a>
 </div>
  <script>
@@ -62,3 +73,4 @@
 </script>
 
  <%@include file="/footer.jsp" %>
+

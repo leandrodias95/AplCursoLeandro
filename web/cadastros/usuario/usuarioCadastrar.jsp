@@ -34,7 +34,7 @@
                 </td>
             </tr>
             <tr>
-                <td align="center" colspan="2"><h5><a href="index.jsp">Voltar à Página Inicial</a></h5></td>
+                <td align="center" colspan="2"><h5><a href="index.jsp">Volta à Página Inicial</a></h5></td>
             </tr>
         </tbody>
     </table>

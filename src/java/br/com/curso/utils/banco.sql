@@ -17,3 +17,11 @@ create table usuario(idusuario serial primary key,
 					insert into usuario(email, senha, nomecompleto, tipousuario) 
 					values('usuario@gmail.com', '123456', 'usuario novo', 'administrador');
                                         select * from usuario
+
+insert into Estado(nomeestado,siglaestado)values('São Paulo','SP');
+
+
+create table Cidade(idCidade serial primary key, nomeCidade varchar(100)not null, situacao varchar(1) not null, idEstado int not null, 
+constraint fk_estado foreign key(idEstado) references Estado(idEstado));
+insert into Cidade(nomeCidade, situacao, idEstado)values('Fernandopolis','A',1);
+insert into Cidade(nomeCidade, situacao, idEstado)values('Jales','A',1);

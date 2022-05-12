@@ -34,7 +34,7 @@
 </table>
 
 <div align="center">
- <a href="${pageContext.request.contextPath}/UsuarioNovo">Novo</a>  
+ <a href="${pageContext.request.contextPath}/UsuarioNovo">Novo</a> 
  <a href="index.jsp">Volta à Página Inicial</a>  
 </div>
  <script>
